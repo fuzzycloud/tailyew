@@ -23,9 +23,9 @@ fn switch(route: &Route) -> Html {
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <BrowserRouter>
+        <HashRouter>
             <Switch<Route> render={Switch::render(switch)} />
-        </BrowserRouter>
+        </HashRouter>
     }
 }
 
