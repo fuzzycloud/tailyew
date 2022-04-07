@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev:demo": "concurrently npm:dev:demo:*",
-    "dev:demo:css":  "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css --watch",
-    "dev:demo:wasm":  "cd demo && trunk serve",
+    "dev:demo:css": "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css --watch",
+    "dev:demo:wasm": "cd demo && trunk serve",
     "build:demo": "npm run build:demo:css && npm run build:demo:wasm",
-    "build:demo:css":  "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css  --minify",
-    "build:demo:wasm":  "cd demo && trunk build --release",
+    "build:demo:css": "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css  --minify",
+    "build:demo:wasm": "cd demo && trunk build --release",
     "prepare": "husky install"
   },
   "author": "",
