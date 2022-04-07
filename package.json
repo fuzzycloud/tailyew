@@ -1,0 +1,26 @@
+{
+  "name": "tailyew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:demo": "concurrently npm:dev:demo:*",
+    "dev:demo:css":  "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css --watch",
+    "dev:demo:wasm":  "cd demo && trunk serve",
+    "build:demo": "npm run build:demo:css && npm run build:demo:wasm",
+    "build:demo:css":  "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css  --minify",
+    "build:demo:wasm":  "cd demo && trunk build --release",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.0.23",
+    "@tailwindcss/typography": "^0.5.2",
+    "daisyui": "^2.11.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "husky": "^7.0.0"
+  }
+}
