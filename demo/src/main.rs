@@ -11,7 +11,10 @@ fn switch(route: &Route) -> Html {
     match route {
         Route::Home => html! {
             <div>
-             {"Demo and Documentation coming soon..."}
+            <h1 class={classes!("text-3xl", "font-bold", "underline")}>
+                {"Demo and Documentation coming soon..."}
+            </h1>
+
             </div>
         },
     }
