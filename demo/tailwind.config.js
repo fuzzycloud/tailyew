@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./src/**/*.rs", "index.html"],
+    content: ["./src/**/*.rs", "../daisyui/src/**/*.rs", "../hero_icons/src/**/*.rs" , "index.html"],
     theme: {
         extend: {},
     },

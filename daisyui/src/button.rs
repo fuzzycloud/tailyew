@@ -59,6 +59,7 @@ impl ButtonSize{
 
 #[derive(Properties, PartialEq)]
 pub struct ButtonProps {
+    #[prop_or_default]
     pub text : &'static str,
     #[prop_or_default]
     pub color: Option<ButtonBrandColors>,
