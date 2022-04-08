@@ -2,13 +2,14 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 mod home;
-mod daisyui;
+mod daisyui_demo;
+mod hero_icons_demo;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum DaisyRoute {
-    #[at("/daisyUI/button")]
+    #[at("/daisyui/button")]
     Button,
-    #[at("/daisyUI/drawer")]
+    #[at("/daisyui/drawer")]
     Drawer
 }
 
@@ -16,11 +17,26 @@ pub enum DaisyRoute {
 pub enum Route {
     #[at("/")]
     Home,
-    #[at("/daisyUI")]
+    #[at("/daisyui")]
     DaisyUIRoot,
-    #[at("/daisyUI/*")]
-    DaisyUI
+    #[at("/daisyui/*")]
+    DaisyUI,
+    #[at("/heroicons")]
+    HeroIconsRoot,
+    #[at("/heroicons/*")]
+    HeroIcons,
+
 }
+
+#[derive(Clone, Routable, PartialEq)]
+pub enum HeroIconsRoute {
+    #[at("/heroicons/outlined")]
+    OutLined,
+    #[at("/heroicons/solid")]
+    Solid,
+
+}
+
 
 fn switch(route: &Route) -> Html {
     match route {
@@ -28,7 +44,10 @@ fn switch(route: &Route) -> Html {
             <home::Route />
         },
         Route::DaisyUI | Route::DaisyUIRoot => html! {
-            <daisyui::route::Route />
+            <daisyui_demo::route::Route />
+        },
+        Route::HeroIcons | Route::HeroIconsRoot => html! {
+            <hero_icons_demo::route::Route />
         }
     }
 }
