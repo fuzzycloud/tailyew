@@ -50,3 +50,10 @@ pub fn chevron_down_outlined() -> Html {
         <ChevronDown icon_type={IconType::OutLined} />
     }
 }
+
+#[function_component(PresentationCharBar)]
+pub fn presentation_chart_bar_outlined() -> Html {
+    html!{
+        <ChevronDown icon_type={IconType::OutLined} />
+    }
+}
