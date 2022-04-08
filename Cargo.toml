@@ -1,5 +1,5 @@
 [workspace]
-members = ["demo", "daisyui", "heroicons"]
+members = ["demo", "daisyui", "hero_icons"]
 
 
 

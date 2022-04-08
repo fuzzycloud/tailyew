@@ -8,6 +8,6 @@ edition = "2021"
 [dependencies]
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 yew-router = { git = "https://github.com/yewstack/yew.git" }
-gloo = "0.6"
+gloo = "0.6.1"
 daisyui = { path = "../daisyui" }
-heroicons = { path = "../heroicons" }
+heroicons = { path = "../hero_icons" }
