@@ -82,8 +82,3 @@ pub fn button (props : &ButtonProps) -> Html {
 }
 
 
-#[derive(Properties, PartialEq)]
-pub struct ButtonControlProps {
-    pub children : Children
-}
-
