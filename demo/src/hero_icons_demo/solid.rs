@@ -1,5 +1,5 @@
 use yew::prelude::*;
-use heroicons::prelude::*;
+use hero_icons::prelude::*;
 
 
 
