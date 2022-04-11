@@ -23,6 +23,24 @@ pub enum DaisyRoute {
     Table,
     #[at("/daisyui/tootip")]
     Tooltip,
+    #[at("/daisyui/input")]
+    Input,
+    #[at("/daisyui/select")]
+    Select,
+    #[at("/daisyui/textarea")]
+    Toggle,
+    #[at("/daisyui/indicator")]
+    Indicator,
+    #[at("/daisyui/menu")]
+    Menu,
+    #[at("/daisyui/step")]
+    Step,
+    #[at("/daisyui/tab")]
+    Tab,
+    #[at("/daisyui/link")]
+    Link,
+
+
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {

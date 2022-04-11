@@ -9,6 +9,14 @@ pub mod carousel;
 pub mod collapse;
 pub mod table;
 pub mod tooltip;
+pub mod input;
+pub mod select;
+pub mod toggle;
+pub mod indicator;
+pub mod menu;
+pub mod step;
+pub mod tab;
+pub mod link;
 
 pub mod prelude {
     pub use crate::button::*;
@@ -22,4 +30,12 @@ pub mod prelude {
     pub use crate::collapse::*;
     pub use crate::table::*;
     pub use crate::tooltip::*;
+    pub use crate::input::*;
+    pub use crate::select::*;
+    pub use crate::toggle::*;
+    pub use crate::indicator::*;
+    pub use crate::menu::*;
+    pub use crate::step::*;
+    pub use crate::tab::*;
+    pub use crate::link::*;
 }
