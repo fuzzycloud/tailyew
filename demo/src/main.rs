@@ -10,9 +10,16 @@ pub enum DaisyRoute {
     #[at("/daisyui/button")]
     Button,
     #[at("/daisyui/drawer")]
-    Drawer
+    Drawer,
+    #[at("/daisyui/card")]
+    Card,
+    #[at("/daisyui/avatar")]
+    Avatar,
+    #[at("/daisyui/carousel")]
+    Carousel,
+    #[at("/daisyui/collapse")]
+    Collapse,
 }
-
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
     #[at("/")]
