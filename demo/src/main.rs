@@ -19,6 +19,10 @@ pub enum DaisyRoute {
     Carousel,
     #[at("/daisyui/collapse")]
     Collapse,
+    #[at("/daisyui/table")]
+    Table,
+    #[at("/daisyui/tootip")]
+    Tooltip,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {

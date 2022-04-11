@@ -17,7 +17,9 @@ pub fn collapse (props:&CollapseProps) -> Html {
 
 #[derive(Properties,PartialEq)]
 pub struct CollapseTitleProps {
-    pub children : Children
+    pub children : Children,
+    #[prop_or_default]
+    pub collapse_title_classes :  &'static str
 }
 
 

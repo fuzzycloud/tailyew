@@ -7,6 +7,8 @@ pub mod avatar;
 pub mod card;
 pub mod carousel;
 pub mod collapse;
+pub mod table;
+pub mod tooltip;
 
 pub mod prelude {
     pub use crate::button::*;
@@ -18,4 +20,6 @@ pub mod prelude {
     pub use crate::card::*;
     pub use crate::carousel::*;
     pub use crate::collapse::*;
+    pub use crate::table::*;
+    pub use crate::tooltip::*;
 }

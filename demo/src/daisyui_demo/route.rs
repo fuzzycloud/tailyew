@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 use crate::DaisyRoute;
-use crate::daisyui_demo::{button, drawer,card,avatar,carousel,collapse};
+use crate::daisyui_demo::{button, drawer,card,avatar,carousel,collapse,table,tooltip};
 
 
 fn switch(route: &DaisyRoute) -> Html {
@@ -11,7 +11,10 @@ fn switch(route: &DaisyRoute) -> Html {
          DaisyRoute::Card => html! {<card::Demo />},        
          DaisyRoute::Avatar => html! {<avatar::Demo />},
          DaisyRoute::Carousel => html! {<carousel::Demo />},        
-         DaisyRoute::Collapse => html! {<collapse::Demo />}        
+         DaisyRoute::Collapse => html! {<collapse::Demo />},
+         DaisyRoute::Table => html! {<table::Demo />},       
+         DaisyRoute::Tooltip => html! {<tooltip::Demo />},       
+
     }
 }
 

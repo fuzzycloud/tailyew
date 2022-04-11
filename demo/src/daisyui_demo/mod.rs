@@ -5,3 +5,5 @@ pub mod card;
 pub mod avatar;
 pub mod carousel;
 pub mod collapse;
+pub mod table;
+pub mod tooltip;
