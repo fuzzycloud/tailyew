@@ -1,22 +1,15 @@
 use yew::prelude::*;
 
-
-
-#[derive(Properties,PartialEq)]
+#[derive(Properties, PartialEq)]
 pub struct LinkProps {
-    
-    pub children : Children,
-    
+    pub children: Children,
 }
 
-
 #[function_component(Link)]
-pub fn link (props:&LinkProps) -> Html {
-    html!{
+pub fn link(props: &LinkProps) -> Html {
+    html! {
         <a class={classes!("link")}>
             {for props.children.iter()}
         </a>
     }
 }
-
-

@@ -1,6 +1,5 @@
-use yew::prelude::*;
 use daisyui::prelude::*;
-
+use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
@@ -15,6 +14,6 @@ pub fn demo() -> Html {
                 //   </Toggle>
                 </Label>
            </div>
-            
+
     }
 }

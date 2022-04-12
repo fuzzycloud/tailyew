@@ -1,5 +1,5 @@
-use yew::prelude::*;
 use daisyui::prelude::*;
+use yew::prelude::*;
 
 // <div class="avatar">
 //   <div class="w-24 rounded">

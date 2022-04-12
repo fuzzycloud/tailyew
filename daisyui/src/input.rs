@@ -12,22 +12,21 @@ impl InputTypes {
         match self {
             InputTypes::Text => "text",
             InputTypes::Email => "email",
-            InputTypes::Number => "number"
-            
+            InputTypes::Number => "number",
         }
     }
 }
 
-#[derive(Properties,PartialEq)]
-pub struct InputProps{
-    pub input_type : InputTypes,
+#[derive(Properties, PartialEq)]
+pub struct InputProps {
+    pub input_type: InputTypes,
     #[prop_or_default]
-    pub input_classes :  &'static str
+    pub input_classes: &'static str,
 }
 
 #[function_component(Input)]
-pub fn input (props:&InputProps) -> Html {
-    html!{
+pub fn input(props: &InputProps) -> Html {
+    html! {
         <input class={classes!("input", props.input_classes)} r#ype={props.input_type.as_str()} />
     }
 }
