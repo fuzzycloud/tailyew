@@ -1,20 +1,19 @@
+use crate::daisyui_demo::{button, drawer};
+use crate::DaisyRoute;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::DaisyRoute;
-use crate::daisyui_demo::{button, drawer};
-
 
 fn switch(route: &DaisyRoute) -> Html {
     match route {
-         DaisyRoute::Button => html! {<button::Demo />},
-         DaisyRoute::Drawer => html! {<drawer::Demo />}
+        DaisyRoute::Button => html! {<button::Demo />},
+        DaisyRoute::Drawer => html! {<drawer::Demo />},
     }
 }
 
 #[function_component(Route)]
 pub fn route() -> Html {
     html! {
-        <div>  
+        <div>
             <div>
             {"Drawer menu will come here"}
 

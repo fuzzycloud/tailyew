@@ -1,5 +1,5 @@
-use::yew::prelude::*;
-use yew::{Properties};
+use ::yew::prelude::*;
+use yew::Properties;
 
 #[derive(PartialEq, Clone)]
 pub enum ButtonBrandColors {
@@ -8,16 +8,16 @@ pub enum ButtonBrandColors {
     Accent,
     Ghost,
     Link,
-  }
+}
 #[derive(PartialEq, Clone)]
-pub enum ButtonSize{
+pub enum ButtonSize {
     Large,
     Small,
     ExtraSmall,
 }
 
 #[derive(PartialEq, Clone)]
-pub enum ButtonTag{
+pub enum ButtonTag {
     Link,
     Button,
     Input,
@@ -27,12 +27,11 @@ pub enum ButtonTag{
 
 #[derive(PartialEq, Clone)]
 
-pub enum ButtonType{
+pub enum ButtonType {
     Submit,
     Reset,
     Button,
 }
-
 
 impl ButtonBrandColors {
     pub fn as_str(&self) -> &'static str {
@@ -46,31 +45,30 @@ impl ButtonBrandColors {
     }
 }
 
-impl ButtonSize{
+impl ButtonSize {
     pub fn as_str(&self) -> &'static str {
-        match self{
+        match self {
             ButtonSize::Large => "btn-lg",
             ButtonSize::Small => "btn-sm",
-            ButtonSize::ExtraSmall => "btn-xs"
+            ButtonSize::ExtraSmall => "btn-xs",
         }
     }
 }
 
-
 #[derive(Properties, PartialEq)]
 pub struct ButtonProps {
     #[prop_or_default]
-    pub text : &'static str,
+    pub text: &'static str,
     #[prop_or_default]
     pub color: Option<ButtonBrandColors>,
     #[prop_or_default]
-    pub is_outline : bool,
+    pub is_outline: bool,
     #[prop_or_default]
-    pub size: Option<ButtonSize>
+    pub size: Option<ButtonSize>,
 }
 
 #[function_component(Button)]
-pub fn button (props : &ButtonProps) -> Html {
+pub fn button(props: &ButtonProps) -> Html {
     html! {
         <button class={classes!(
             "btn",
@@ -80,5 +78,3 @@ pub fn button (props : &ButtonProps) -> Html {
         )}>{props.text}</button>
     }
 }
-
-
