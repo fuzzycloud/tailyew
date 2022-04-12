@@ -12,4 +12,4 @@ gloo = "0.6"
 serde = { version = "1.0", features = ["derive"] }
 chrono = { version = "0.4.19", features = ["serde", "wasmbind"] }
 daisyui = { path = "../daisyui" }
-heroicons = { path = "../hero_icons" }
+hero_icons = { path = "../hero_icons" }
