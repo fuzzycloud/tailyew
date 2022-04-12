@@ -1,8 +1,8 @@
-use yew::prelude::*;
 use crate::icons::*;
+use yew::prelude::*;
 
 #[function_component(AdjustmentsIconSolid)]
-pub fn adjustments_solid () -> Html {
+pub fn adjustments_solid() -> Html {
     html! {
         <AdjustmentsIcon icon_type={IconType::Solid} />
 
@@ -10,8 +10,8 @@ pub fn adjustments_solid () -> Html {
 }
 
 #[function_component(ArrowLeftIconSolid)]
-pub fn arrow_left_solid () -> Html{
-    html!{
+pub fn arrow_left_solid() -> Html {
+    html! {
         <ArrowLeftIcon icon_type={IconType::Solid} />
 
     }

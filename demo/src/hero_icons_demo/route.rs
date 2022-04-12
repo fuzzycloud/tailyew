@@ -1,8 +1,7 @@
+use crate::hero_icons_demo::{outlined, solid};
+use crate::HeroIconsRoute;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::HeroIconsRoute;
-use crate::hero_icons_demo::{outlined,solid};
-
 
 fn switch(route: &HeroIconsRoute) -> Html {
     match route {
@@ -14,7 +13,7 @@ fn switch(route: &HeroIconsRoute) -> Html {
 #[function_component(Route)]
 pub fn route() -> Html {
     html! {
-        <div>  
+        <div>
             <div>
             {"Icons will come here"}
 

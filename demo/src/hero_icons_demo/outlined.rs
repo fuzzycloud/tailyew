@@ -1,5 +1,5 @@
+use hero_icons::prelude::*;
 use yew::prelude::*;
-use heroicons::prelude::*;
 
 #[function_component(Demos)]
 pub fn demos() -> Html {
@@ -12,11 +12,11 @@ pub fn demos() -> Html {
                 <ArrowNarrowDownOutlined/>
                 <CheckOutLined/>
                 <ChevronDownOutLined/>
-                
+
         </div>
          </>
 
 
-         
+
     }
 }
