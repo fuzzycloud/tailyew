@@ -1,39 +1,20 @@
 use yew::prelude::*;
 
-// #[derive(Properties, PartialEq)]
-// pub struct AlertProps {
-//     pub children: Children,
-//     #[prop_or_default]
-//     pub alert_classes: &'static str,
-// }
-
-// #[function_component(Alert)]
-// pub fn alert(props: &AlertProps) -> Html {
-//     html! {
-//         <div class={classes!("alert", props.alert_classes)}>
-//         {for props.children.iter()}
-//         </div>
-//     }
-// }
-
 #[derive(PartialEq, Clone)]
-
 pub enum AlertType {
-    Alert,
-    AlertInfo,
-    AlertSuccess,
-    AlertWarning,
-    AlertError,
+    Info,
+    Success,
+    Warning,
+    Error,
 }
 
 impl AlertType {
     pub fn as_str(&self) -> &'static str {
         match self {
-            AlertType::Alert => "alert",
-            AlertType::AlertInfo => "alert-info",
-            AlertType::AlertSuccess => "alert-success",
-            AlertType::AlertWarning => "alert-warning",
-            AlertType::AlertError => "alert-error",
+            AlertType::Info => "alert-info",
+            AlertType::Success => "alert-success",
+            AlertType::Warning => "alert-warning",
+            AlertType::Error => "alert-error",
         }
     }
 }
@@ -41,18 +22,19 @@ impl AlertType {
 #[derive(Properties, PartialEq)]
 pub struct AlertProps {
     #[prop_or_default]
-    pub text: &'static str,
+    pub children: Children,
     #[prop_or_default]
     pub color: Option<AlertType>,
 }
 
 #[function_component(Alert)]
-pub fn allert(props: &AlertProps) -> Html {
+pub fn alert(props: &AlertProps) -> Html {
     html! {
         <div class={classes!(
             "alert",
             props.color.clone().map(|x| x.as_str()).unwrap_or_default(),
-
-        )}>{props.text}</div>
+        )}>
+            {for props.children.iter()}
+        </div>
     }
 }
