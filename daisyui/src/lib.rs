@@ -1,3 +1,4 @@
+pub mod alert;
 pub mod avatar;
 pub mod button;
 pub mod card;
@@ -19,6 +20,7 @@ pub mod toggle;
 pub mod tooltip;
 
 pub mod prelude {
+    pub use crate::alert::*;
     pub use crate::avatar::*;
     pub use crate::button::*;
     pub use crate::card::*;

@@ -1,3 +1,4 @@
+pub mod alert;
 pub mod avatar;
 pub mod button;
 pub mod card;
