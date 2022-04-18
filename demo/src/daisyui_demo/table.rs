@@ -1,10 +1,34 @@
 use daisyui::prelude::*;
 use yew::prelude::*;
 
+#[derive(Properties, PartialEq, Clone)]
+pub struct DisplayProp {
+    title: &'static str,
+    // code : &'static str,
+    preview: Html,
+}
+
+#[function_component(Display)]
+pub fn display(props: &DisplayProp) -> Html {
+    html! {
+        <div class="m-12">
+           <Card card_classes="bg-base-100 shadow-xl">
+                <CardBody>
+                    <CardTitle>
+                        <p> {props.title} </p>
+                    </CardTitle>
+                    {props.preview.clone()}
+                </CardBody>
+            </Card>
+        </div>
+    }
+}
+
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
-        <div class="overflow-x-auto">
+    let table = html! {
+
+      <div class="overflow-x-auto">
             <Table table_classes="w-full">
             <thead>
             <tr>
@@ -35,6 +59,12 @@ pub fn demo() -> Html {
             </tr>
           </tbody>
             </Table>
+        </div>
+    };
+
+    html! {
+        <div>
+            <Display title="Table" preview={table} />
         </div>
     }
 }
