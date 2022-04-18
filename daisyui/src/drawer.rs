@@ -6,6 +6,7 @@ pub struct DrawerProps {
     pub children: Children,
     #[prop_or_default]
     pub is_mobile: bool,
+    pub class: Classes,
 }
 
 #[function_component(Drawer)]
@@ -14,7 +15,9 @@ pub fn drawer(props: &DrawerProps) -> Html {
     html! {
         <div class={classes!(
             "drawer",
-            props.is_mobile.then(|| "drawer-mobile")
+            props.is_mobile.then(|| "drawer-mobile"),
+            props.class.clone(),
+
         )}>
         { for props.children.iter() }
         </div>
@@ -25,12 +28,15 @@ pub fn drawer(props: &DrawerProps) -> Html {
 #[derive(Properties, PartialEq)]
 pub struct DrawerContentProps {
     pub children: Children,
+    pub class: Classes,
 }
 
 #[function_component(DrawerContent)]
 pub fn drawer_content(props: &DrawerContentProps) -> Html {
     html! {
-        <div class = {classes!("drawer-content")}>
+        <div class = {classes!("drawer-content",
+        props.class.clone(),
+    )}>
         { for props.children.iter() }
         </div>
 

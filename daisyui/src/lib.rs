@@ -12,6 +12,7 @@ pub mod input;
 pub mod link;
 pub mod menu;
 pub mod model;
+pub mod nav;
 pub mod select;
 pub mod step;
 pub mod tab;
@@ -34,6 +35,7 @@ pub mod prelude {
     pub use crate::link::*;
     pub use crate::menu::*;
     pub use crate::model::*;
+    pub use crate::nav::*;
     pub use crate::select::*;
     pub use crate::step::*;
     pub use crate::tab::*;

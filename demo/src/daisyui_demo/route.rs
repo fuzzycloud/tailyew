@@ -1,6 +1,6 @@
 use crate::daisyui_demo::{
-    alert, avatar, button, card, carousel, collapse, drawer, indicator, input, link, menu, select,
-    step, tab, table, toggle, tooltip,
+    alert, avatar, button, card, carousel, collapse, drawer, home, indicator, input, link, menu,
+    nav, select, step, tab, table, toggle, tooltip,
 };
 use crate::DaisyRoute;
 use yew::prelude::*;
@@ -25,6 +25,8 @@ fn switch(route: &DaisyRoute) -> Html {
         DaisyRoute::Tab => html! {<tab::Demo />},
         DaisyRoute::Link => html! {<link::Demo />},
         DaisyRoute::Alert => html! {<alert::Demo />},
+        DaisyRoute::Nav => html! {<nav::Demo />},
+        DaisyRoute::Home => html! {<home::Demo />},
     }
 }
 

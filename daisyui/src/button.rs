@@ -65,6 +65,8 @@ pub struct ButtonProps {
     pub is_outline: bool,
     #[prop_or_default]
     pub size: Option<ButtonSize>,
+    #[prop_or_default]
+    pub classes: Classes,
 }
 
 #[function_component(Button)]
@@ -74,7 +76,8 @@ pub fn button(props: &ButtonProps) -> Html {
             "btn",
             props.color.clone().map(|x| x.as_str()).unwrap_or_default(),
             props.size.clone().map( |x| x.as_str()).unwrap_or_default(),
-            props.is_outline.then(|| "btn-outline")
+            props.is_outline.then(|| "btn-outline"),
+            props.classes.clone()
         )}>{props.text}</button>
     }
 }

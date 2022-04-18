@@ -5,10 +5,10 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     html! {
         <div>
-            <Drawer>
+            <Drawer class="drawer-mobile">
             <input id="my-drawer" type="checkbox" class="drawer-toggle"/>
-            <DrawerContent>
-            <label for="my-drawer" class="btn btn-primary drawer-button">{"Open drawer"}</label>
+            <DrawerContent class="flex flex-col items-center justify-center">
+            <label for="my-drawer" class="btn btn-primary drawer-button lg:hidden">{"Open drawer"}</label>
             </DrawerContent>
             <DrawerSide>
                 <label for="my-drawer" class="drawer-overlay"></label>

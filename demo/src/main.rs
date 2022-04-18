@@ -41,6 +41,10 @@ pub enum DaisyRoute {
     Link,
     #[at("/daisyui/alert")]
     Alert,
+    #[at("/daisyui/nav")]
+    Nav,
+    #[at("/daisyui/home")]
+    Home,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
