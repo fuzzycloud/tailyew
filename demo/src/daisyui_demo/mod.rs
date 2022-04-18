@@ -4,6 +4,7 @@ pub mod button;
 pub mod card;
 pub mod carousel;
 pub mod collapse;
+pub mod display_prop;
 pub mod drawer;
 pub mod home;
 pub mod indicator;
