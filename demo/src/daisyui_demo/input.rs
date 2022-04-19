@@ -1,9 +1,16 @@
+use crate::daisyui_demo::display_prop::Display;
 use daisyui::input::*;
 use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
+    let input = html! {
         <Input input_classes="w-full max-w-xs"  input_type={InputTypes::Text} />
+    };
+
+    html! {
+        <div>
+            <Display title="Input" preview={input} />
+        </div>
     }
 }

@@ -3,12 +3,14 @@ use yew::prelude::*;
 #[derive(Properties, PartialEq)]
 pub struct DropdownProps {
     pub children: Children,
+    #[prop_or_default]
+    pub class: Classes,
 }
 
 #[function_component(Dropdown)]
 pub fn dropdown(props: &DropdownProps) -> Html {
     html! {
-        <div class={classes!("dropdown")}>
+        <div class={classes!("dropdown",props.class.clone())}>
         {for props.children.iter()}
         </div>
     }
@@ -17,13 +19,15 @@ pub fn dropdown(props: &DropdownProps) -> Html {
 #[derive(Properties, PartialEq)]
 pub struct DropdownContentProps {
     pub children: Children,
+    #[prop_or_default]
+    pub class: Classes,
 }
 
 #[function_component(DropdownContent)]
 pub fn dropdown_content(props: &DropdownContentProps) -> Html {
     html! {
-        <div class={classes!("dropdown-content")}>
+        <ul class={classes!("dropdown-content",props.class.clone())}>
         {for props.children.iter()}
-        </div>
+        </ul>
     }
 }

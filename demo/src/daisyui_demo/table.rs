@@ -1,10 +1,12 @@
+use crate::daisyui_demo::display_prop::Display;
 use daisyui::prelude::*;
 use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
-        <div class="overflow-x-auto">
+    let table = html! {
+
+      <div class="overflow-x-auto">
             <Table table_classes="w-full">
             <thead>
             <tr>
@@ -35,6 +37,12 @@ pub fn demo() -> Html {
             </tr>
           </tbody>
             </Table>
+        </div>
+    };
+
+    html! {
+        <div>
+            <Display title="Table" preview={table} />
         </div>
     }
 }

@@ -27,7 +27,7 @@ pub enum DaisyRoute {
     Input,
     #[at("/daisyui/select")]
     Select,
-    #[at("/daisyui/textarea")]
+    #[at("/daisyui/toggle")]
     Toggle,
     #[at("/daisyui/indicator")]
     Indicator,
@@ -41,6 +41,18 @@ pub enum DaisyRoute {
     Link,
     #[at("/daisyui/alert")]
     Alert,
+    #[at("/daisyui/nav")]
+    Nav,
+    #[at("/daisyui/home")]
+    Home,
+    #[at("/daisyui/modal")]
+    Modal,
+    #[at("/daisyui/dropdown")]
+    Dropdown,
+    #[at("/daisyui/badge")]
+    Badge,
+    #[at("/daisyui/textarea")]
+    Textarea,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {

@@ -1,9 +1,10 @@
+use crate::daisyui_demo::display_prop::Display;
 use daisyui::prelude::*;
 use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
+    let menu = html! {
        <Menu menu_classes="bg-base-100 w-56">
 
                 <li><a>{"Item 1"}</a></li>
@@ -11,5 +12,10 @@ pub fn demo() -> Html {
                 <li><a>{"Item 3"}</a></li>
 
        </Menu>
+    };
+    html! {
+        <div>
+            <Display title="Menu" preview={menu} />
+        </div>
     }
 }

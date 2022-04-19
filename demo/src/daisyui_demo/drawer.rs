@@ -1,16 +1,17 @@
+use crate::daisyui_demo::display_prop::Display;
 use daisyui::prelude::*;
 use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
+    let drawer = html! {
         <div>
-            <Drawer>
+            <Drawer class="drawer-mobile">
             <input id="my-drawer" type="checkbox" class="drawer-toggle"/>
-            <DrawerContent>
-            <label for="my-drawer" class="btn btn-primary drawer-button">{"Open drawer"}</label>
+            <DrawerContent class="flex flex-col items-center justify-center">
+            <label for="my-drawer" class="btn btn-primary drawer-button lg:hidden">{"Open drawer"}</label>
             </DrawerContent>
-            <DrawerSide>
+            <DrawerSide class="">
                 <label for="my-drawer" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                       <li><a>{"Sidebar Item 1"}</a></li>
@@ -18,6 +19,12 @@ pub fn demo() -> Html {
                     </ul>
             </DrawerSide>
             </Drawer>
+        </div>
+    };
+
+    html! {
+        <div>
+            <Display title="Drawer" preview={drawer} />
         </div>
     }
 }
