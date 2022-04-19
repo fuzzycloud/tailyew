@@ -35,38 +35,114 @@ fn switch(route: &DaisyRoute) -> Html {
     }
 }
 
+#[derive(Clone, PartialEq)]
+struct DemoRoute {
+    pub title: &'static str,
+    pub route: DaisyRoute,
+}
+
 #[function_component(Route)]
 pub fn route() -> Html {
-    let alert = "Alert";
-    let avatar = "Avatar";
-    let button = "Button";
-    let card = "Card";
-    let carousel = "Carousel";
-    let collapse = "Collapse";
-    let drawer = "Drawer";
-    let home = "Home";
-    let indicator = "Indicator";
-    let input = "Input";
-    let link = "Link";
-    let menu = "Menu";
-    let modal = "Modal";
-    let nav = "Nav";
-    let select = "Select";
-    let step = "Step";
-    let tab = "Tab";
-    let table = "Table";
-    let toggle = "Toggle";
-    let tooltip = "Tooltip";
-    let modal = "Modal";
-    let dropdown = "Dropdown";
-    let badge = "Badge";
-    let textarea = "Textarea";
+    let routes = vec![
+        DemoRoute {
+            title: "Button",
+            route: DaisyRoute::Button,
+        },
+        DemoRoute {
+            title: "Drawer",
+            route: DaisyRoute::Drawer,
+        },
+        DemoRoute {
+            title: "Card",
+            route: DaisyRoute::Card,
+        },
+        DemoRoute {
+            title: "Avatar",
+            route: DaisyRoute::Avatar,
+        },
+        DemoRoute {
+            title: "Carousel",
+            route: DaisyRoute::Carousel,
+        },
+        DemoRoute {
+            title: "Collapse",
+            route: DaisyRoute::Collapse,
+        },
+        DemoRoute {
+            title: "Table",
+            route: DaisyRoute::Table,
+        },
+        DemoRoute {
+            title: "Tooltip",
+            route: DaisyRoute::Tooltip,
+        },
+        DemoRoute {
+            title: "Input",
+            route: DaisyRoute::Input,
+        },
+        DemoRoute {
+            title: "Select",
+            route: DaisyRoute::Select,
+        },
+        DemoRoute {
+            title: "Toggle",
+            route: DaisyRoute::Toggle,
+        },
+        DemoRoute {
+            title: "Indicator",
+            route: DaisyRoute::Indicator,
+        },
+        DemoRoute {
+            title: "Menu",
+            route: DaisyRoute::Menu,
+        },
+        DemoRoute {
+            title: "Step",
+            route: DaisyRoute::Step,
+        },
+        DemoRoute {
+            title: "Tab",
+            route: DaisyRoute::Tab,
+        },
+        DemoRoute {
+            title: "Link",
+            route: DaisyRoute::Link,
+        },
+        DemoRoute {
+            title: "Alert",
+            route: DaisyRoute::Alert,
+        },
+        DemoRoute {
+            title: "Nav",
+            route: DaisyRoute::Nav,
+        },
+        DemoRoute {
+            title: "Home",
+            route: DaisyRoute::Home,
+        },
+        DemoRoute {
+            title: "Modal",
+            route: DaisyRoute::Modal,
+        },
+        DemoRoute {
+            title: "Dropdown",
+            route: DaisyRoute::Dropdown,
+        },
+        DemoRoute {
+            title: "Badge",
+            route: DaisyRoute::Badge,
+        },
+        DemoRoute {
+            title: "Textarea",
+            route: DaisyRoute::Textarea,
+        },
+    ];
 
     html! {
         <div>
             <div class="flex">
             <div class="w-1/5 ">
-                <div class="drawer-mobile ">
+                <div class="drawer-mobile">
                     <input id="my-drawer" type="checkbox" class="drawer-toggle"/>
                         <div class="flex flex-col items-center justify-center">
                             <label for="my-drawer" class="btn btn-primary drawer-button lg:hidden">{"Open drawer"}</label>
@@ -75,118 +151,17 @@ pub fn route() -> Html {
                             <label for="my-drawer" class="drawer-overlay"></label>
                                 <div class="drawer-side  ">
                                     <ul class="menu p-4 bg-base-200 overflow-y-auto w-80 bg-base-100 text-base-content">
-                                        <li>
-
-                                           <Link<DaisyRoute> to={DaisyRoute::Button}>
-                                            {"Button"}
-                                            </Link<DaisyRoute>>
-
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Dropdown}>
-                                            {"Dropdown"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Modal}>
-                                            {"Modal"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Alert}>
-                                            {"Alert"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Avatar}>
-                                            {"Avatar"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Card}>
-                                            {"Card"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Carousel}>
-                                            {"Carousel"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Collapse}>
-                                            {"Collapse"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Table}>
-                                            {"Table"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Tooltip}>
-                                            {"Tooltip"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Select}>
-                                            {"Select"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Toggle}>
-                                            {"Toggle"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Drawer}>
-                                            {"Drawer"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Indicator}>
-                                            {"Indicator"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Step}>
-                                            {"Step"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Link}>
-                                            {"Link"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Menu}>
-                                            {"Menu"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-
-                                        <li>
-                                            <Link<DaisyRoute> to={DaisyRoute::Tab}>
-                                            {"Tab"}
-                                            </Link<DaisyRoute>>
-                                        </li>
-                                        <li>
-                                        <Link<DaisyRoute> to={DaisyRoute::Badge}>
-                                        {"Badge"}
-                                        </Link<DaisyRoute>>
-                                    </li>
-                                    <li>
-                                    <Link<DaisyRoute> to={DaisyRoute::Textarea}>
-                                    {"Textarea"}
-                                    </Link<DaisyRoute>>
-                                </li>
+                                        {routes.iter().map(|route| {
+                                            html! {
+                                                <li>
+                                                    <Link<DaisyRoute> to={route.route.clone()}>
+                                                         {route.title}
+                                                    </Link<DaisyRoute>>
+                                                </li>
+                                            }
+                                        }).collect::<Html>()}
                                     </ul>
-                            </div>
+                                </div>
                             </div>
                         </div>
                      </div>
@@ -197,64 +172,3 @@ pub fn route() -> Html {
         </div>
     }
 }
-
-//  <li>
-// <Link<DaisyRoute> to={DaisyRoute::Breadcrumbs}>
-// {"Breadcrumbs"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Inputgroup}>
-// {"Input group"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Buttongroup}>
-// {"Buttongroup"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Divider}>
-// {"Divider"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Textarea}>
-// {"Textarea"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Ceckbox}>
-// {"Ceckbox"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Textinput}>
-// {"Textinput"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Radio}>
-// {"Radio"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-//     <Link<DaisyRoute> to={DaisyRoute::Badge}>
-//     {"Badge"}
-//     </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Navbar}>
-// {"Navbar"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Pagination}>
-// {"Pagination"}
-// </Link<DaisyRoute>>
-// </li>
-// <li>
-// <Link<DaisyRoute> to={DaisyRoute::Steps}>
-// {"Steps"}
-// </Link<DaisyRoute>>
-// </li>

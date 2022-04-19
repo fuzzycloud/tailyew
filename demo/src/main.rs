@@ -27,7 +27,7 @@ pub enum DaisyRoute {
     Input,
     #[at("/daisyui/select")]
     Select,
-    #[at("/daisyui/textarea")]
+    #[at("/daisyui/toggle")]
     Toggle,
     #[at("/daisyui/indicator")]
     Indicator,
