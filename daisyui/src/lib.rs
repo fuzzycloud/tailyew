@@ -1,5 +1,6 @@
 pub mod alert;
 pub mod avatar;
+pub mod badge;
 pub mod button;
 pub mod card;
 pub mod carousel;
@@ -11,18 +12,20 @@ pub mod indicator;
 pub mod input;
 pub mod link;
 pub mod menu;
-pub mod model;
+pub mod modal;
 pub mod nav;
 pub mod select;
 pub mod step;
 pub mod tab;
 pub mod table;
+pub mod textarea;
 pub mod toggle;
 pub mod tooltip;
 
 pub mod prelude {
     pub use crate::alert::*;
     pub use crate::avatar::*;
+    pub use crate::badge::*;
     pub use crate::button::*;
     pub use crate::card::*;
     pub use crate::carousel::*;
@@ -34,12 +37,13 @@ pub mod prelude {
     pub use crate::input::*;
     pub use crate::link::*;
     pub use crate::menu::*;
-    pub use crate::model::*;
+    pub use crate::modal::*;
     pub use crate::nav::*;
     pub use crate::select::*;
     pub use crate::step::*;
     pub use crate::tab::*;
     pub use crate::table::*;
+    pub use crate::textarea::*;
     pub use crate::toggle::*;
     pub use crate::tooltip::*;
 }

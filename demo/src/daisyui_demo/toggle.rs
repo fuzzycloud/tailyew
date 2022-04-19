@@ -1,19 +1,23 @@
+use crate::daisyui_demo::display_prop::Display;
 use daisyui::prelude::*;
 use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    html! {
+    let toggle = html! {
            <div class="form-control">
                 <Label label_classes="cursor-pointer">
                   <LabelText>
                   {"Remember me"}
                   </LabelText>
-                //   <Toggle>
-                    // <Input input_classes="toggle-primary" input_type={InputTypes::Checkbox}/>
-                //   </Toggle>
                 </Label>
            </div>
 
+    };
+
+    html! {
+        <div>
+            <Display title="Toggle" preview={toggle} />
+        </div>
     }
 }

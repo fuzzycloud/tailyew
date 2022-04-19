@@ -46,12 +46,13 @@ pub fn drawer_content(props: &DrawerContentProps) -> Html {
 #[derive(Properties, PartialEq)]
 pub struct DrawerSideProps {
     pub children: Children,
+    pub class: Classes,
 }
 
 #[function_component(DrawerSide)]
 pub fn drawer_side(props: &DrawerSideProps) -> Html {
     html! {
-        <div class = {classes!("drawer-side")}>
+        <div class = {classes!("drawer-side",props.class.clone())}>
         { for props.children.iter() }
         </div>
 
