@@ -1,5 +1,4 @@
-use ::yew::prelude::*;
-use yew::Properties;
+use yew::prelude::*;
 
 #[derive(PartialEq, Clone)]
 pub enum ButtonBrandColors {
@@ -26,7 +25,6 @@ pub enum ButtonTag {
 }
 
 #[derive(PartialEq, Clone)]
-
 pub enum ButtonType {
     Submit,
     Reset,
@@ -66,18 +64,21 @@ pub struct ButtonProps {
     #[prop_or_default]
     pub size: Option<ButtonSize>,
     #[prop_or_default]
-    pub classes: Classes,
+    pub class: Classes,
+    #[prop_or_default]
+    pub onclick: Callback<MouseEvent>,
 }
 
 #[function_component(Button)]
 pub fn button(props: &ButtonProps) -> Html {
     html! {
-        <button class={classes!(
-            "btn",
+        <button
+            onclick={props.onclick.clone()}
+            class={classes!("btn",
             props.color.clone().map(|x| x.as_str()).unwrap_or_default(),
             props.size.clone().map( |x| x.as_str()).unwrap_or_default(),
             props.is_outline.then(|| "btn-outline"),
-            props.classes.clone()
+            props.class.clone()
         )}>{props.text}</button>
     }
 }

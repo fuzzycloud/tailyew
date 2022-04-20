@@ -5,7 +5,8 @@ use yew::prelude::*;
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let input = html! {
-        <Input input_classes="w-full max-w-xs"  input_type={InputTypes::Text} />
+        <Input class="w-full max-w-xs"  input_type={InputTypes::Text} />
+
     };
 
     html! {

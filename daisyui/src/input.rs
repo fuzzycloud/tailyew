@@ -21,12 +21,18 @@ impl InputTypes {
 pub struct InputProps {
     pub input_type: InputTypes,
     #[prop_or_default]
-    pub input_classes: &'static str,
+    pub class: Classes,
+    #[prop_or_default]
+    pub key: &'static str,
+    #[prop_or_default]
+    pub oninput: Callback<InputEvent>,
+    #[prop_or_default]
+    pub name: &'static str,
 }
 
 #[function_component(Input)]
 pub fn input(props: &InputProps) -> Html {
     html! {
-        <input class={classes!("input", props.input_classes)} r#ype={props.input_type.as_str()} />
+        <input name={props.name} key={props.key} oninput={props.oninput.clone()} class={classes!("input", props.class.clone())} r#type={props.input_type.as_str()} />
     }
 }
