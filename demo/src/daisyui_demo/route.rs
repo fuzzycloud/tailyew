@@ -1,9 +1,8 @@
-pub use crate::daisyui_demo::drawer::Demo;
-use crate::daisyui_demo::{
+use crate::DaisyRoute;
+use demo_components::daisyui::{
     alert, avatar, badge, button, card, carousel, collapse, drawer, dropdown, home, indicator,
     link, menu, modal, nav, select, step, tab, table, text_input, textarea, toggle, tooltip,
 };
-use crate::DaisyRoute;
 use yew::prelude::*;
 use yew_router::prelude::*;
 

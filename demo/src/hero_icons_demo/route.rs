@@ -1,5 +1,5 @@
-use crate::hero_icons_demo::{outlined, solid};
 use crate::HeroIconsRoute;
+use demo_components::hero_icons::{outlined, solid};
 use yew::prelude::*;
 use yew_router::prelude::*;
 

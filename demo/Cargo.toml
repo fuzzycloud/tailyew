@@ -13,4 +13,5 @@ serde = { version = "1.0", features = ["derive"] }
 chrono = { version = "0.4.19", features = ["serde", "wasmbind"] }
 daisyui = { path = "../daisyui" }
 hero_icons = { path = "../hero_icons" }
+demo_components = {path = "../demo_components"}
 wasm-bindgen = "0.2"
