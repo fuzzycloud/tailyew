@@ -6,7 +6,6 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let textarea = html! {
         <Textarea class="textarea">
-            {"Bio"}
         </Textarea>
     };
     html! {

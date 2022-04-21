@@ -23,8 +23,8 @@ pub enum DaisyRoute {
     Table,
     #[at("/daisyui/tootip")]
     Tooltip,
-    #[at("/daisyui/input")]
-    Input,
+    #[at("/daisyui/text_input")]
+    TextInput,
     #[at("/daisyui/select")]
     Select,
     #[at("/daisyui/toggle")]

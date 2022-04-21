@@ -2,12 +2,6 @@ use crate::daisyui_demo::display_prop::Display;
 use daisyui::prelude::*;
 use yew::prelude::*;
 
-#[derive(Properties, PartialEq, Clone)]
-pub struct DisplayProp {
-    title: &'static str,
-    preview: Html,
-}
-
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let button = html! {
