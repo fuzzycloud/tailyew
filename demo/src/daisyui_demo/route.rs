@@ -1,7 +1,7 @@
 pub use crate::daisyui_demo::drawer::Demo;
 use crate::daisyui_demo::{
     alert, avatar, badge, button, card, carousel, collapse, drawer, dropdown, home, indicator,
-    input, link, menu, modal, nav, select, step, tab, table, textarea, toggle, tooltip,
+    link, menu, modal, nav, select, step, tab, table, text_input, textarea, toggle, tooltip,
 };
 use crate::DaisyRoute;
 use yew::prelude::*;
@@ -17,7 +17,7 @@ fn switch(route: &DaisyRoute) -> Html {
         DaisyRoute::Collapse => html! {<collapse::Demo />},
         DaisyRoute::Table => html! {<table::Demo />},
         DaisyRoute::Tooltip => html! {<tooltip::Demo />},
-        DaisyRoute::Input => html! {<input::Demo />},
+        DaisyRoute::TextInput => html! {<text_input::Demo />},
         DaisyRoute::Select => html! {<select::Demo />},
         DaisyRoute::Toggle => html! {<toggle::Demo />},
         DaisyRoute::Indicator => html! {<indicator::Demo />},
@@ -77,8 +77,8 @@ pub fn route() -> Html {
             route: DaisyRoute::Tooltip,
         },
         DemoRoute {
-            title: "Input",
-            route: DaisyRoute::Input,
+            title: "TextInput",
+            route: DaisyRoute::TextInput,
         },
         DemoRoute {
             title: "Select",
