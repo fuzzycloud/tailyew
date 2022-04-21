@@ -6,7 +6,7 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let indicator = html! {
       <Indicator>
-        <IndicatorItem indicator_item_classes="badge badge-secondary  pt-24">{"New"}
+        <IndicatorItem class="badge badge-secondary  pt-24">{"New"}
             <div class="grid w-32 h-32 bg-base-300 place-items-center ml-48 mt-24 ">{"content"}</div>
         </IndicatorItem>
       </Indicator>

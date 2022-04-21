@@ -10,7 +10,7 @@ pub fn demo() -> Html {
                 <Button text="TailYew" />
              </div>
             <div class="flex-none">
-                <Menu menu_classes="menu-horizontal p-0">
+                <Menu class="menu-horizontal p-0">
 
                     <li><a>{"Home"}</a></li>
                     <li><a>{"Svg"}</a></li>

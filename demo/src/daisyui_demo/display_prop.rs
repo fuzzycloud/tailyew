@@ -11,7 +11,7 @@ pub struct DisplayProp {
 pub fn display(props: &DisplayProp) -> Html {
     html! {
         <div class="m-12 p-12">
-           <Card card_classes="bg-base-100 shadow-xl">
+           <Card class="bg-base-100 shadow-xl">
                 <CardBody>
                     <CardTitle>
                         <p> {props.title} </p>

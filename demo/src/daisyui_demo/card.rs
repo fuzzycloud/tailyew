@@ -6,7 +6,7 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let card = html! {
 
-        <Card card_classes="w-96 bg-base-100 shadow-xl">
+        <Card class="w-96 bg-base-100 shadow-xl">
             <figure>
                 <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" />
             </figure>

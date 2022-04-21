@@ -6,8 +6,8 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let steps = html! {
         <Steps>
-        <Step step_classes="step-primary">{"Who shot first?"}</Step>
-        <Step step_classes="step-primary">{"Han Solo"}</Step>
+        <Step class="step-primary">{"Who shot first?"}</Step>
+        <Step class="step-primary">{"Han Solo"}</Step>
         <Step>{"Greedo"}</Step>
     </Steps>
     };

@@ -4,13 +4,13 @@ use yew::prelude::*;
 pub struct CardProps {
     pub children: Children,
     #[prop_or_default]
-    pub card_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Card)]
 pub fn card(props: &CardProps) -> Html {
     html! {
-        <div class={classes!("card", props.card_classes)}>
+        <div class={classes!("card", props.class.clone())}>
         {for props.children.iter()}
         </div>
     }

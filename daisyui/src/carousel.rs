@@ -4,13 +4,13 @@ use yew::prelude::*;
 pub struct CarouselProps {
     pub children: Children,
     #[prop_or_default]
-    pub carousel_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Carousel)]
 pub fn carousel(props: &CarouselProps) -> Html {
     html! {
-        <div class={classes!("carousel",props.carousel_classes)}>
+        <div class={classes!("carousel",props.class.clone())}>
             {for props.children.iter()}
         </div>
     }

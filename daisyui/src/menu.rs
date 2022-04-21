@@ -4,13 +4,13 @@ use yew::prelude::*;
 pub struct MenuProps {
     pub children: Children,
     #[prop_or_default]
-    pub menu_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Menu)]
 pub fn menu(props: &MenuProps) -> Html {
     html! {
-        <ul class={classes!("menu",props.menu_classes)}>
+        <ul class={classes!("menu",props.class.clone())}>
         {for props.children.iter()}
         </ul>
     }

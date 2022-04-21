@@ -4,13 +4,13 @@ use yew::prelude::*;
 pub struct ModalProps {
     pub children: Children,
     #[prop_or_default]
-    pub classes: Classes,
+    pub class: Classes,
 }
 
 #[function_component(Modal)]
 pub fn modal(props: &ModalProps) -> Html {
     html! {
-        <div class={classes!("modal",props.classes.clone())}>
+        <div class={classes!("modal",props.class.clone())}>
         {for props.children.iter()}
         </div>
     }
@@ -36,13 +36,13 @@ pub fn modal_box(props: &ModalBoxProps) -> Html {
 pub struct ModalActionProps {
     pub children: Children,
     #[prop_or_default]
-    pub classes: Classes,
+    pub class: Classes,
 }
 
 #[function_component(ModalAction)]
 pub fn modal_action(props: &ModalActionProps) -> Html {
     html! {
-        <div class={classes!("modal-action",props.classes.clone())}>
+        <div class={classes!("modal-action",props.class.clone())}>
         {for props.children.iter()}
         </div>
     }

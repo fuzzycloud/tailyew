@@ -6,7 +6,7 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let toggle = html! {
            <div class="form-control">
-                <Label label_classes="cursor-pointer">
+                <Label class="cursor-pointer">
                   <LabelText>
                   {"Remember me"}
                   </LabelText>

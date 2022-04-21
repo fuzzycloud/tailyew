@@ -7,7 +7,7 @@ pub fn demo() -> Html {
     let collapse = html! {
 
       <Collapse>
-          <CollapseTitle collapse_title_classes="text-xl font-medium">{" Focus me to see content"}</CollapseTitle>
+          <CollapseTitle class="text-xl font-medium">{" Focus me to see content"}</CollapseTitle>
           <CollapseContent>{"attribute is necessary to make the div focusable"}</CollapseContent>
       </Collapse>
     };

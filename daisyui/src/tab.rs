@@ -18,13 +18,13 @@ pub fn tabs(props: &TabsProps) -> Html {
 pub struct TabProps {
     pub children: Children,
     #[prop_or_default]
-    pub tab_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Tab)]
 pub fn tab(props: &TabProps) -> Html {
     html! {
-        <li class={classes!("tab",props.tab_classes)}>
+        <li class={classes!("tab",props.class.clone())}>
         {for props.children.iter()}
         </li>
     }
