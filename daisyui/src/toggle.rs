@@ -4,13 +4,13 @@ use yew::prelude::*;
 pub struct LabelProps {
     pub children: Children,
     #[prop_or_default]
-    pub label_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Label)]
 pub fn label(props: &LabelProps) -> Html {
     html! {
-        <div class={classes!("label",props.label_classes)}>
+        <div class={classes!("label",props.class.clone())}>
             {for props.children.iter()}
         </div>
     }

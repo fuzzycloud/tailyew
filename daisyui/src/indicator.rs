@@ -18,7 +18,7 @@ pub fn indicator(props: &IndicatorProps) -> Html {
 pub struct IndicatorItemProps {
     pub children: Children,
     #[prop_or_default]
-    pub indicator_item_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(IndicatorItem)]

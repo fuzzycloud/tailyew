@@ -18,13 +18,13 @@ pub fn steps(props: &StepsProps) -> Html {
 pub struct StepProps {
     pub children: Children,
     #[prop_or_default]
-    pub step_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Step)]
 pub fn step(props: &StepProps) -> Html {
     html! {
-        <li class={classes!("step",props.step_classes)}>
+        <li class={classes!("step",props.class.clone())}>
         {for props.children.iter()}
         </li>
     }

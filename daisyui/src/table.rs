@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub struct TableProps {
     pub children: Children,
     #[prop_or_default]
-    pub table_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(Table)]

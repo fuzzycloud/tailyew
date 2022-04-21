@@ -6,7 +6,7 @@ use yew::prelude::*;
 pub fn demo() -> Html {
     let carousel = html! {
 
-        <Carousel carousel_classes=" rounded-box">
+        <Carousel class=" rounded-box">
             <CarouselItem >
                 <img src="https://api.lorem.space/image/burger?w=400&h=300&hash=8B7BCDC2" alt="Burger" />
             </CarouselItem>

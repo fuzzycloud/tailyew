@@ -7,7 +7,7 @@ pub fn demo() -> Html {
     let tab = html! {
         <div>
         <Tab>{"Who shot first?"}</Tab>
-        <Tab tab_classes="tab-active">{"Han Solo"}</Tab>
+        <Tab class="tab-active">{"Han Solo"}</Tab>
         <Tab>{"Greedo"}</Tab>
     </div>
     };

@@ -18,7 +18,7 @@ pub fn collapse(props: &CollapseProps) -> Html {
 pub struct CollapseTitleProps {
     pub children: Children,
     #[prop_or_default]
-    pub collapse_title_classes: &'static str,
+    pub class: Classes,
 }
 
 #[function_component(CollapseTitle)]

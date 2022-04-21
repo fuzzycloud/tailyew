@@ -5,7 +5,7 @@ use yew::prelude::*;
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let menu = html! {
-       <Menu menu_classes="bg-base-100 w-56">
+       <Menu class="bg-base-100 w-56">
 
                 <li><a>{"Item 1"}</a></li>
                 <li><a>{"Item 2"}</a></li>

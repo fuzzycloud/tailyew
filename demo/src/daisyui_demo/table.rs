@@ -7,7 +7,7 @@ pub fn demo() -> Html {
     let table = html! {
 
       <div class="overflow-x-auto">
-            <Table table_classes="w-full">
+            <Table class="w-full">
             <thead>
             <tr>
               <th></th>
