@@ -25,8 +25,6 @@ pub struct TextInputProps {
     #[prop_or_default]
     pub class: Classes,
     #[prop_or_default]
-    pub key: &'static str,
-    #[prop_or_default]
     pub oninput: Callback<InputEvent>,
     #[prop_or_default]
     pub name: &'static str,
@@ -35,6 +33,6 @@ pub struct TextInputProps {
 #[function_component(TextInput)]
 pub fn text_input(props: &TextInputProps) -> Html {
     html! {
-        <input name={props.name} key={props.key} oninput={props.oninput.clone()} class={classes!("input", props.class.clone())} r#type={props.input_type.as_str()} />
+        <input name={props.name} oninput={props.oninput.clone()} class={classes!("input", props.class.clone())} type={props.input_type.as_str()} />
     }
 }

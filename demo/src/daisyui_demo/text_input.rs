@@ -4,13 +4,18 @@ use yew::prelude::*;
 
 #[function_component(Demo)]
 pub fn demo() -> Html {
-    let input = html! {
+    let text_input = html! {
         <TextInput class="w-full max-w-xs"  input_type={TextInputTypes::Text} />
     };
 
+    let password = html! {
+        <TextInput key={"some_password"} class="w-full max-w-xs" input_type={TextInputTypes::Password} />
+    };
+
     html! {
-        <div>
-            <Display title="Input" preview={input} />
-        </div>
+        <>
+            <Display title="Input" preview={text_input} />
+            <Display title="Password" preview={password} />
+        </>
     }
 }
