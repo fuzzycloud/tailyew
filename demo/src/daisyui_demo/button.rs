@@ -17,7 +17,7 @@ pub fn demo() -> Html {
 
     let button_with_brand = html! {
         <>
-            <Button text="Button" />
+            <Button text="Button"  />
             <Button text="Primary" color={ButtonBrandColors::Primary}  />
             <Button text="Secondary" color={ButtonBrandColors::Secondary}  />
             <Button text="Link" color={ButtonBrandColors::Link}  />

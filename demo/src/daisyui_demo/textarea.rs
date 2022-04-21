@@ -5,7 +5,7 @@ use yew::prelude::*;
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let textarea = html! {
-        <Textarea>
+        <Textarea class="textarea">
             {"Bio"}
         </Textarea>
     };
