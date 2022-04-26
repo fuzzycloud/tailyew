@@ -14,6 +14,7 @@ pub mod link;
 pub mod menu;
 pub mod modal;
 pub mod nav;
+pub mod radio;
 pub mod select;
 pub mod step;
 pub mod tab;
@@ -42,6 +43,7 @@ pub mod prelude {
     pub use crate::daisyui::menu::*;
     pub use crate::daisyui::modal::*;
     pub use crate::daisyui::nav::*;
+    pub use crate::daisyui::radio::*;
     pub use crate::daisyui::select::*;
     pub use crate::daisyui::step::*;
     pub use crate::daisyui::tab::*;

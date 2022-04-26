@@ -53,6 +53,8 @@ pub enum DaisyRoute {
     Badge,
     #[at("/daisyui/textarea")]
     Textarea,
+    #[at("/daisyui/radio")]
+    Radio,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
