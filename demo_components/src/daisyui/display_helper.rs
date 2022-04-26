@@ -12,8 +12,8 @@ pub fn display(props: &DisplayProp) -> Html {
     html! {
         <div class="m-12 p-12">
            <Card class="bg-base-100 shadow-xl">
-                <CardBody>
-                    <CardTitle>
+                <CardBody class="">
+                    <CardTitle class="">
                         <p> {props.title} </p>
                     </CardTitle>
                     {props.preview.clone()}
