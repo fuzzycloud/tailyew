@@ -54,6 +54,8 @@ pub fn demo() -> Html {
                     <li><a>{"Pagination"}</a></li>
                     <li><a>{"Steps"}</a></li>
                     <li><a>{"Tab"}</a></li>
+                    <li><a>{"Radio"}</a></li>
+
                     </ul>
             </DrawerSide>
         </Drawer>
