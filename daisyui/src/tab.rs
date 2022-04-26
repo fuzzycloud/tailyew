@@ -3,12 +3,13 @@ use yew::prelude::*;
 #[derive(Properties, PartialEq)]
 pub struct TabsProps {
     pub children: Children,
+    pub class: Classes,
 }
 
 #[function_component(Tabs)]
 pub fn tabs(props: &TabsProps) -> Html {
     html! {
-        <div class={classes!("tabs")}>
+        <div class={classes!("tabs",props.class.clone())}>
         {for props.children.iter()}
         </div>
     }

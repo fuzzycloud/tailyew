@@ -5,7 +5,7 @@ use yew::prelude::*;
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let tab = html! {
-        <Tabs>
+        <Tabs class="text-3xl">
             <Tab>{"Who shot first?"}</Tab>
             <Tab class="tab-active">{"Han Solo"}</Tab>
             <Tab>{"Greedo"}</Tab>
