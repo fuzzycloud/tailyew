@@ -10,8 +10,8 @@ pub fn demo() -> Html {
             <figure>
                 <img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" />
             </figure>
-            <CardBody>
-                <CardTitle> {"Shoes!"} </CardTitle>
+            <CardBody class="">
+                <CardTitle class=""> {"Shoes!"} </CardTitle>
                 <p>{"If a dog chews shoes whose shoes does he choose?"}</p>
             <CardActions>
                 <div class="card-actions justify-end">

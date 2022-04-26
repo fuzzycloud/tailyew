@@ -19,12 +19,13 @@ pub fn card(props: &CardProps) -> Html {
 #[derive(Properties, PartialEq)]
 pub struct CardBodyProps {
     pub children: Children,
+    pub class: Classes,
 }
 
 #[function_component(CardBody)]
 pub fn card_body(props: &CardBodyProps) -> Html {
     html! {
-        <div class={classes!("card-body")}>
+        <div class={classes!("card-body",props.class.clone())}>
         {for props.children.iter()}
         </div>
     }
@@ -33,12 +34,13 @@ pub fn card_body(props: &CardBodyProps) -> Html {
 #[derive(Properties, PartialEq)]
 pub struct CardTitleProps {
     pub children: Children,
+    pub class: Classes,
 }
 
 #[function_component(CardTitle)]
 pub fn card_title(props: &CardTitleProps) -> Html {
     html! {
-        <div class={classes!("card-title")}>
+        <div class={classes!("card-title",props.class.clone())}>
             {for props.children.iter()}
         </div>
     }
