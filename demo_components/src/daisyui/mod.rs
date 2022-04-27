@@ -6,6 +6,7 @@ pub mod card;
 pub mod carousel;
 pub mod collapse;
 pub mod display_helper;
+pub mod divider;
 pub mod drawer;
 pub mod dropdown;
 pub mod home;
@@ -35,6 +36,7 @@ pub mod prelude {
     pub use crate::daisyui::carousel::*;
     pub use crate::daisyui::collapse::*;
     pub use crate::daisyui::display_helper::*;
+    pub use crate::daisyui::divider::*;
     pub use crate::daisyui::drawer::*;
     pub use crate::daisyui::dropdown::*;
     pub use crate::daisyui::home::*;

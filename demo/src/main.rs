@@ -55,6 +55,8 @@ pub enum DaisyRoute {
     Textarea,
     #[at("/daisyui/radio")]
     Radio,
+    #[at("/daisyui/divider")]
+    Divider,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {

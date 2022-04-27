@@ -1,7 +1,8 @@
 use crate::DaisyRoute;
 use demo_components::daisyui::{
-    alert, avatar, badge, button, card, carousel, collapse, drawer, dropdown, home, indicator,
-    link, menu, modal, nav, radio, select, step, tab, table, text_input, textarea, toggle, tooltip,
+    alert, avatar, badge, button, card, carousel, collapse, divider, drawer, dropdown, home,
+    indicator, link, menu, modal, nav, radio, select, step, tab, table, text_input, textarea,
+    toggle, tooltip,
 };
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -32,6 +33,7 @@ fn switch(route: &DaisyRoute) -> Html {
         DaisyRoute::Badge => html! {<badge::Demo />},
         DaisyRoute::Textarea => html! {<textarea::Demo />},
         DaisyRoute::Radio => html! {<radio::Demo />},
+        DaisyRoute::Divider => html! {<divider::Demo />},
     }
 }
 
@@ -139,6 +141,10 @@ pub fn route() -> Html {
         DemoRoute {
             title: "Radio",
             route: DaisyRoute::Radio,
+        },
+        DemoRoute {
+            title: "Divider",
+            route: DaisyRoute::Divider,
         },
     ];
 
