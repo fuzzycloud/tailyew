@@ -8,6 +8,23 @@ pub enum ButtonBrandColors {
     Ghost,
     Link,
 }
+
+#[derive(PartialEq, Clone)]
+pub enum ButtonOutline {
+    OutlinePrimary,
+    OutlineSecondary,
+    OutlineAccent,
+    Outline,
+}
+
+#[derive(PartialEq, Clone)]
+pub enum ButtonOutlineColor {
+    OutlineColorInfo,
+    OutlineColorSuccess,
+    OutlineColorWarning,
+    OutlineColorError,
+}
+
 #[derive(PartialEq, Clone)]
 pub enum ButtonSize {
     Large,
@@ -43,6 +60,28 @@ impl ButtonBrandColors {
     }
 }
 
+impl ButtonOutlineColor {
+    pub fn as_str(&self) -> &'static str {
+        match self {
+            ButtonOutlineColor::OutlineColorInfo => "btn-outline btn-info",
+            ButtonOutlineColor::OutlineColorSuccess => "btn-outline btn-success",
+            ButtonOutlineColor::OutlineColorWarning => "btn-outline btn-warning",
+            ButtonOutlineColor::OutlineColorError => "btn-outline btn-error",
+        }
+    }
+}
+
+impl ButtonOutline {
+    pub fn as_str(&self) -> &'static str {
+        match self {
+            ButtonOutline::Outline => "btn-outline",
+            ButtonOutline::OutlinePrimary => "btn-outline btn-primary",
+            ButtonOutline::OutlineSecondary => "btn-outline btn-secondary",
+            ButtonOutline::OutlineAccent => "btn-outline btn-accent",
+        }
+    }
+}
+
 impl ButtonSize {
     pub fn as_str(&self) -> &'static str {
         match self {
@@ -59,6 +98,10 @@ pub struct ButtonProps {
     pub text: &'static str,
     #[prop_or_default]
     pub color: Option<ButtonBrandColors>,
+    #[prop_or_default]
+    pub outline: Option<ButtonOutline>,
+    #[prop_or_default]
+    pub outlinecolor: Option<ButtonOutlineColor>,
     #[prop_or_default]
     pub is_outline: bool,
     #[prop_or_default]
@@ -77,6 +120,8 @@ pub fn button(props: &ButtonProps) -> Html {
             class={classes!("btn",
             props.color.clone().map(|x| x.as_str()).unwrap_or_default(),
             props.size.clone().map( |x| x.as_str()).unwrap_or_default(),
+            props.outline.clone().map( |x| x.as_str()).unwrap_or_default(),
+            props.outlinecolor.clone().map( |x| x.as_str()).unwrap_or_default(),
             props.is_outline.then(|| "btn-outline"),
             props.class.clone()
         )}>{props.text}</button>
