@@ -25,7 +25,6 @@ fn switch(route: &DaisyRoute) -> Html {
         DaisyRoute::Step => html! {<step::Demo />},
         DaisyRoute::Tab => html! {<tab::Demo />},
         DaisyRoute::Link => html! {<link::Demo />},
-        DaisyRoute::Alert => html! {<alert::Demo />},
         DaisyRoute::Nav => html! {<nav::Demo />},
         DaisyRoute::Home => html! {<home::Demo />},
         DaisyRoute::Modal => html! {<modal::Demo />},
@@ -34,6 +33,7 @@ fn switch(route: &DaisyRoute) -> Html {
         DaisyRoute::Textarea => html! {<textarea::Demo />},
         DaisyRoute::Radio => html! {<radio::Demo />},
         DaisyRoute::Divider => html! {<divider::Demo />},
+        DaisyRoute::Alert => html! {<alert::Demo />},
     }
 }
 

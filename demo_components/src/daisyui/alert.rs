@@ -6,39 +6,21 @@ use yew::prelude::*;
 #[function_component(Demo)]
 pub fn demo() -> Html {
     let alert = html! {
-        <div >
-        <Alert color={AlertType::Success}>
-        <CheckIconSolid />
-        <span>{"Your purchase has been confirmed!"}</span>
-        </Alert>
+       <Alert class="alert-info shadow-lg">
+    //    <ArrowCircleLeftOutLined />
+       <div>
+            <span class="mr-16">{"New software update available."} </span>
+            <div class="float justify-right items-right">
+            <XCircleOutLined />
+            </div>
+
+
         </div>
+       </Alert>
     };
-
-    let alert_type = html! {
-        <>
-            <Alert color={AlertType::Success} >
-            <CheckIconSolid />
-                <span>{"Your purchase has been confirmed!"}</span>
-            </Alert>
-            <Alert color={AlertType::Warning} >
-            <CheckIconSolid />
-                <span>{"Your purchase has been confirmed!"}</span>
-            </Alert>
-            <Alert color={AlertType::Info} >
-            <CheckIconSolid />
-                <span>{"Your purchase has been confirmed!"}</span>
-            </Alert>
-            <Alert color={AlertType::Error} >
-            <CheckIconSolid />
-                <span>{"Your purchase has been confirmed!"}</span>
-            </Alert>
-        </>
-    };
-
     html! {
         <div>
-            <Display title="alert" preview={alert} />
-            <Display title="Alert Component" preview={alert_type} />
+            <Display title="Alert" preview={alert} />
         </div>
     }
 }

@@ -39,8 +39,8 @@ pub enum DaisyRoute {
     Tab,
     #[at("/daisyui/link")]
     Link,
-    #[at("/daisyui/alert")]
-    Alert,
+    // #[at("/daisyui/alert")]
+    // Alert,
     #[at("/daisyui/nav")]
     Nav,
     #[at("/daisyui/home")]
@@ -57,6 +57,8 @@ pub enum DaisyRoute {
     Radio,
     #[at("/daisyui/divider")]
     Divider,
+    #[at("/daisyui/alert")]
+    Alert,
 }
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
