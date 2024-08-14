@@ -176,7 +176,7 @@ pub fn route() -> Html {
                         </div>
                      </div>
                         <div class="w-4/5">
-                        <Switch<DaisyRoute> render={Switch::render(switch)} />
+                         <Switch<DaisyRoute> render={|route: DaisyRoute| switch(&route)} />
                         </div>
             </div>
         </div>

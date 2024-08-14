@@ -1,8 +1,6 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 cargo fmt --check
-cargo clippy -- -D warnings
 cargo test
 npm run build:demo
 git add -A

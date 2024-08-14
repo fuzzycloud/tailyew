@@ -19,7 +19,7 @@ pub fn route() -> Html {
 
             </div>
             <div>
-                <Switch<HeroIconsRoute> render={Switch::render(switch)} />
+                 <Switch<HeroIconsRoute> render={|route: HeroIconsRoute| switch(&route)} />
             </div>
         </div>
     }

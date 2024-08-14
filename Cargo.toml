@@ -1,6 +1,6 @@
 [workspace]
 members = ["demo", "daisyui", "hero_icons", "demo_components"] 
-
+resolver = "2"
 
 
 [profile.release]

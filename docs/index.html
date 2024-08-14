@@ -1,5 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
     <title>Demo TailYew</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/dark.min.css">
     <script type="module">
@@ -9,9 +11,20 @@
         hljs.registerLanguage('xml', html);
         hljs.highlightAll();
     </script> -->
-    <link rel="stylesheet" href="./output-bcd462a0e099346c.css">
+    
+<script type="module" nonce="0uxy3iVBUiA+hkYk3ejqpA==">
+import init, * as bindings from './demo-6793c76cb18ada6.js';
+const wasm = await init('./demo-6793c76cb18ada6_bg.wasm');
 
-<link rel="preload" href="./demo-4bd4c6d6f509731b_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="./demo-4bd4c6d6f509731b.js"></head>
-<body>
-<script type="module">import init from './demo-4bd4c6d6f509731b.js';init('./demo-4bd4c6d6f509731b_bg.wasm');</script></body></html>
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <link rel="stylesheet" href="./output-cd7bfdecc3376c27.css" integrity="sha384&#x2D;DBuxRjy&#x2B;iTtRQnoyFCBFmpCp4S523tF4VlmFRY&#x2B;Sr7joZttNOLFMbFP647i5HTKX"/>
+
+<link rel="modulepreload" href="./demo-6793c76cb18ada6.js" crossorigin=anonymous integrity="sha384-VeRRkbRJMypE+27liaQgmIzJg9HR13c6LzjoWzo8DUPmhl8+WzeiF+SYgqLnFhwb">
+<link rel="preload" href="./demo-6793c76cb18ada6_bg.wasm" crossorigin=anonymous integrity="sha384-iARslrFPChG7BfJVjJ32RbsELOVDiP0mpVnOr9+8vTsh+pTqkgXrGik8dJ9+7uap" as="fetch" type="application/wasm"></head>
+</html>

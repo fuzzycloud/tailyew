@@ -6,22 +6,22 @@
   "scripts": {
     "dev:demo": "concurrently npm:dev:demo:*",
     "dev:demo:css": "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css --watch",
-    "dev:demo:wasm": "cd demo && trunk serve --public-url=/ --release=false",
+    "dev:demo:wasm": "cd demo && trunk serve --public-url=/ --port=8000",
     "build:demo": "npm run build:demo:css && npm run build:demo:wasm && node extract-selectors.js",
     "build:demo:css": "cd demo && tailwindcss -i styles/tailwind.css -o styles/output.css  --minify",
     "build:demo:wasm": "cd demo && trunk build --release",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.2",
-    "daisyui": "^2.22.0",
+    "@tailwindcss/typography": "^0.5.14",
+    "daisyui": "^4.12.10",
     "list-selectors": "^2.0.1",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.4.10"
   },
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "husky": "^7.0.0"
+    "concurrently": "^8.2.2",
+    "husky": "^9.1.4"
   }
 }

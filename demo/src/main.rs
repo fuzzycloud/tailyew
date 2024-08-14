@@ -100,7 +100,7 @@ fn switch(route: &Route) -> Html {
 pub fn app() -> Html {
     html! {
         <HashRouter>
-            <Switch<Route> render={Switch::render(switch)} />
+            <Switch<Route> render={|route: Route| switch(&route)} />
         </HashRouter>
     }
 }
